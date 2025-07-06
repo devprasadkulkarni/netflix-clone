@@ -9,10 +9,10 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-const TitleCards = () => {
+const TitleCards = ({ title, category }) => {
   return (
     <div className="titlecards">
-      <h2>Popular on Netflix</h2>
+      <h2> {title ? title : "Popular on Netflix"} </h2>
       <Swiper
         modules={[Navigation]}
         spaceBetween={10}
@@ -20,9 +20,9 @@ const TitleCards = () => {
         navigation
         pagination={{ clickable: true }}
         breakpoints={{
-          320: { slidesPerView: 2 },
-          480: { slidesPerView: 3 },
-          768: { slidesPerView: 4 },
+          320: { slidesPerView: 1 },
+          480: { slidesPerView: 1 },
+          768: { slidesPerView: 2 },
           1024: { slidesPerView: 5 },
         }}
       >

@@ -1,0 +1,5 @@
+/* Stronger selector with !important */
+.titlecards .swiper-button-prev,
+.titlecards .swiper-button-next {
+  color: #e50914 !important; /* Netflix red */
+}
