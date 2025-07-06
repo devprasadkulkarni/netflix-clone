@@ -3,3 +3,8 @@
 .titlecards .swiper-button-next {
   color: #e50914 !important; /* Netflix red */
 }
+
+.card img {
+  width: 95%;
+  padding-right: 6%;
+}
