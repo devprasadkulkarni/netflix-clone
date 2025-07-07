@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./TitleCards.css";
 import cards_data from "../../assets/cards/Cards_data";
+import { Link } from "react-router-dom";
 
 // Swiper imports
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -51,13 +52,13 @@ const TitleCards = ({ title, category }) => {
       >
         {apiData.map((card, index) => (
           <SwiperSlide key={index}>
-            <div className="card">
+            <Link to={`/player/${card.id}`} className="card">
               <img
                 src={`https://image.tmdb.org/t/p/w500` + card.backdrop_path}
                 alt={card.original_title}
               />
               <p>{card.original_title}</p>
-            </div>
+            </Link>
           </SwiperSlide>
         ))}
       </Swiper>
